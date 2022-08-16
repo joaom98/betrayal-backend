@@ -7,14 +7,14 @@ class Creature {
     }
 
     move ( toCoordinate ){
-        if ( this.coordinate.isAdjacentTo( toCoordinate ) ) {
-            this.energy--;
-            this.coordinate = toCoordinate;
-            return true;
-        }
-        else {
+        if (!  this.coordinate.isAdjacentTo( toCoordinate ) || !toCoordinate.isValid())
+        {
             return false;
         }
+        
+        this.energy--;
+        this.coordinate = toCoordinate;
+        return true;
     }
 
     attack ( enemy ){
@@ -63,6 +63,6 @@ class Creature {
 
 }
 
-module.exports = {
+export {
     Creature
-};
+}

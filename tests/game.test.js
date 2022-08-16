@@ -1,4 +1,5 @@
-const { Game } = require('../src/Game')
+import { Game } from '../src/Match/Game';
+
 describe('Game tests', () => {
     test('Game starts', () => {
         const game = new Game();

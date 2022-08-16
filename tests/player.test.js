@@ -1,6 +1,6 @@
-const { Coordinate } = require('../src/Coordinate')
-const { Creature } = require('../src/Creature')
-const { Player } = require('../src/Player')
+import { Coordinate }  from '../src/Match/Coordinate';
+import { Creature }  from '../src/Match/Creature';
+import { Player }  from '../src/Match/Player';
 
 describe('Player tests', () => {
     test('Start a player without a creature', () => {

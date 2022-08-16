@@ -1,5 +1,5 @@
-const { Creature } = require('../src/Creature')
-const { Coordinate } = require('../src/Coordinate')
+import { Creature } from '../src/Match/Creature'
+import { Coordinate } from '../src/Match/Coordinate'
 
 describe('Creature criation', () => {
     test('Creature has the right starting parameters', () => {
@@ -33,7 +33,7 @@ describe('Creature criation', () => {
         const creature = new Creature(coordinate1);
     
         expect(creature.move(coordinate2)).toBe(false);
-        expect(creature.coordinate1).toEqual(coordinate1);
+        expect(creature.coordinate).toEqual(coordinate1);
     })
     
 })

@@ -1,6 +1,6 @@
-const { Player } = require('../Player');
-const { Coordinate } = require('../Coordinate');
-const { Creature } = require('../Creature');
+import { Player } from '../Player';
+import { Coordinate } from '../Coordinate';
+import { Creature } from '../Creature';
 
 class Game {
     constructor() {
@@ -58,6 +58,7 @@ class Game {
     }
 }
 
-module.exports = {
+
+export {
     Game
-};
+}

@@ -16,6 +16,10 @@ class Coordinate {
         this.y = y;
     }
 
+    isValid(){
+        return (this.x > 0 && this.y > 0);
+    }
+
     equals( thatCoordinate ){
         if (this.x === thatCoordinate.x && this.y === thatCoordinate.y){
             return true;
@@ -73,6 +77,7 @@ class Coordinate {
 
 }
 
-module.exports = {
-    Coordinate
-};
+export {
+    Coordinate,
+    DIRECTIONS
+}

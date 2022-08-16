@@ -1,4 +1,4 @@
-const { Coordinate } = require('../src/Coordinate')
+import { Coordinate } from '../src/Match/Coordinate';
 
 describe('Coordinate tests', () => {
     test('Coordinate contains (2,1) values', () => {

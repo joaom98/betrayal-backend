@@ -8,6 +8,6 @@ class Player{
     }
 }
 
-module.exports = {
+export {
     Player
-};
+}
