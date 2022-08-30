@@ -5,16 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "start": "node ./src/Server/index.js" 
+    "start": "node ./src/Server/index.js"
   },
   "author": "jm",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.18.1",
     "socket.io": "^4.5.1"
   },
   "devDependencies": {
     "eslint": "^8.22.0",
     "jest": "^27.2.1"
   },
-  "type":"module"
+  "type": "module"
 }
