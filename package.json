@@ -4,7 +4,8 @@
   "description": "Backend of an IO game involving cells controlled by players",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "start": "node ./src/Server/index.js" 
   },
   "author": "jm",
   "license": "ISC",

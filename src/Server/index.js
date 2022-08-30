@@ -1,13 +1,19 @@
 import { createServer } from "http";
 import { Server } from "socket.io";
 
-const httpServer = createServer();
-const io = new Server(httpServer, {
-  // options
+const server = createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({
+    data: 'Hello World!'
+  }));
 });
 
-io.on("connection", (socket) => {
-  // ...
-});
+// const io = new Server(httpServer, {
+//   // options
+// });
 
-httpServer.listen(3000);
+// io.on("connection", (socket) => {
+//   // ...
+// });
+
+server.listen(3000);
