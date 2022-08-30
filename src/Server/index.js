@@ -1,19 +1,13 @@
-import { createServer } from "http";
-import { Server } from "socket.io";
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server);
 
-const server = createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.end(JSON.stringify({
-    data: 'Hello World!'
-  }));
+
+io.on('connection', (socket) => {
+  console.log('a user connected');
 });
 
-// const io = new Server(httpServer, {
-//   // options
-// });
-
-// io.on("connection", (socket) => {
-//   // ...
-// });
-
-server.listen(3000);
+server.listen(3000, () => {
+  console.log('listening on *:3000');
+});
